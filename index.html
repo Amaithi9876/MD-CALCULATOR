@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CALCULATOR JAVASCRIPT MD </h1>
+    <table>
+        <tr><td colspan="6"><input id="i1"></input></td>
+
+        </tr>
+        <tr>
+            <td><button onclick="sent(1)">1</button></td>
+            <td><button onclick="sent(2)">2</button></td>
+            <td><button onclick="sent(3)">3</button></td>
+            <td><button onclick="sent(4)">4</button></td>
+            <td><button onclick="sent(5)">5</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="sent(6)">6</button></td>
+            <td><button onclick="sent(7)">7</button></td>
+            <td><button onclick="sent(8)">8</button></td>
+            <td><button onclick="sent(9)">9</button></td>
+            <td><button onclick="sent(0)">0</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="sent('+')">+</button></td>
+            <td><button onclick="sent('-')">-</button></td>
+            <td><button onclick="sent('*')">*</button></td>
+            <td><button onclick="sent('/')">/</button></td>
+            <td><button onclick="sent('=')">=</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="sent('log')">log</button></td>
+            <td><button onclick="sent('^')">^</button></td>
+            <td><button onclick="sent('1/x')">1/x</button></td>
+            <td><button onclick="sent('.')">.</button></td>
+            <td><button onclick="sent('AC')">AC</button></td>
+            
+        </tr>
+    </table>
+    <script>
+        function sent(i) 
+        {
+            x=document.getElementById("i1");
+            switch (i) {
+                case 1:
+                    x.value+=1;
+                    break;
+                    case 2: x.value+=2; break;
+                    case 3: x.value+=3; break;
+                    case 4: x.value+=4; break;
+                    case 5: x.value+=5; break;
+                    case 6: x.value+=6; break;
+                    case 7: x.value+=7; break;
+                    case 8: x.value+=8; break;
+                    case 9: x.value+=9; break;
+                    case 0: x.value+=0; break;
+
+                    case '+':x.value+='+'; break;
+                    case '-':x.value+='-'; break;
+                    case '*':x.value+='*'; break;
+                    case '/':x.value+='/'; break;
+                    case '.':x.value+='.'; break;
+                    case "AC":x.value+=""; break;
+                  case '=':
+                            result=eval(x.value);
+                            x.value=result;
+                            break;
+                            case 'log':
+                                result=eval(math.log10(x.value));
+                                x.value=result;
+                                break;
+                                case '^' :
+                                      result=eval(math.sqrt(x.value));
+                                      x.value=result;    
+                                break;
+                                
+            }                   
+                            
+            
+        }
+    </script>
+</body>
+</html>
